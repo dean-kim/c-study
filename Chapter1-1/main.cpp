@@ -7,27 +7,29 @@
 #include <cstdio> // printf
 #include <string>
 
+using namespace std;
+
+int addTwoNumbers(int num_a, int num_b)
+{
+    int sum = num_a + num_b;
+
+    return sum;
+}
+
+int multiplyTwoNumbers(int num_a, int num_b)
+{
+    int sum = num_a * num_b;
+
+    return sum;
+}
+
+
 int main()
 {
-    using namespace std;
-    int x = 1024;
-    double pi = 3.141592;
-    string myName = "Dean";
 
-    cout << "some text" << endl;
-    cout << "x is " << x << " pi is " << pi << endl;
-    cout << "My name is " << myName << endl;
-
-    cout << "abc" << "\t" << "def" << endl;
-
-    // audio
-    cout << "\a";
-
-    int aa;
-
-    cin >> aa;
-
-    cout << "Your input is " << aa << endl;
+    cout << multiplyTwoNumbers(1, 2) << endl;
+    cout << addTwoNumbers(3, 4) << endl;
+    cout << addTwoNumbers(8, 13) << endl;
 
     return 0;
 }
