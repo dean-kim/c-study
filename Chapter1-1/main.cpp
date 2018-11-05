@@ -3,24 +3,19 @@
 //
 
 #include "main.h"
-#include <iostream>
+#include <iostream> // cout, cin, endl, ...
+#include <cstdio> // printf
+#include <string>
 
 int main()
 {
-    int x = 1;
-    x = x + 2;
-    std::cout << x << std::endl; // #1
+    int x = 1024;
+    double pi = 3.141592;
+    std::string myName = "Dean";
 
-    int y = x;
-    std::cout << y << std::endl; // #2
-
-    // is (x + y) l-value or r-value?
-    std::cout << x + y << std::endl; // #3
-
-    std::cout << x << std::endl; // #4
-
-    int z;
-    std::cout << z << std::endl; // #5
+    std::cout << "some text" << std::endl;
+    std::cout << "x is " << x << " pi is " << pi << std::endl;
+    std::cout << "My name is " << myName << std::endl;
 
     return 0;
 }
