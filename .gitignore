@@ -33,7 +33,7 @@
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff:
-.idea/c-study.iml
+.idea/*.iml
 .idea/misc.xml
 .idea/.name
 Chapter1-1/cmake-build-debug/
