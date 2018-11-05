@@ -34,6 +34,9 @@
 
 # User-specific stuff:
 .idea/c-study.iml
+.idea/misc.xml
+.idea/.name
+Chapter1-1/cmake-build-debug/
 .idea/workspace.xml
 .idea/tasks.xml
 .idea/dictionaries
@@ -41,8 +44,8 @@
 .idea/jsLibraryMappings.xml
 .idea/codeStyles/Project.xml
 .DS_Store
-Chapter1_1/.DS_Store
-Chapter1_1/cmake-build-debug/.DS_Store
+Chapter1-1/.DS_Store
+Chapter1-1/cmake-build-debug/.DS_Store
 
 # Sensitive or high-churn files:
 .idea/dataSources.ids
