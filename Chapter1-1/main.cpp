@@ -20,5 +20,14 @@ int main()
 
     cout << "abc" << "\t" << "def" << endl;
 
+    // audio
+    cout << "\a";
+
+    int aa;
+
+    cin >> aa;
+
+    cout << "Your input is " << aa << endl;
+
     return 0;
 }
