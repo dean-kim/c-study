@@ -46,6 +46,7 @@ Chapter1-1/cmake-build-debug/
 .DS_Store
 Chapter1-1/.DS_Store
 Chapter1-1/cmake-build-debug/.DS_Store
+CMakeLists.txt
 
 # Sensitive or high-churn files:
 .idea/dataSources.ids
