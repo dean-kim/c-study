@@ -23,13 +23,26 @@ int multiplyTwoNumbers(int num_a, int num_b)
     return sum;
 }
 
+void printHelloWorld()
+{
+    cout << "Hello World" << endl;
+
+    return;
+}
+
 
 int main()
 {
 
-    cout << multiplyTwoNumbers(1, 2) << endl;
-    cout << addTwoNumbers(3, 4) << endl;
-    cout << addTwoNumbers(8, 13) << endl;
+    int x = 0;
 
+    cout << x << " " << &x << endl;
+
+    {
+        int x = 0;
+
+        cout << x << " " << &x << endl;
+
+    }
     return 0;
 }
