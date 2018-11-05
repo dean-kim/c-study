@@ -2,47 +2,23 @@
 // Created by KEUNU on 05/11/2018.
 //
 
-#include "main.h"
-#include <iostream> // cout, cin, endl, ...
-#include <cstdio> // printf
-#include <string>
+#include <iostream>
 
 using namespace std;
 
-int addTwoNumbers(int num_a, int num_b)
+void doSomthing(int x)
 {
-    int sum = num_a + num_b;
-
-    return sum;
+    x = 123;
+    cout << x << endl; // #2
 }
-
-int multiplyTwoNumbers(int num_a, int num_b)
-{
-    int sum = num_a * num_b;
-
-    return sum;
-}
-
-void printHelloWorld()
-{
-    cout << "Hello World" << endl;
-
-    return;
-}
-
 
 int main()
 {
-
     int x = 0;
 
-    cout << x << " " << &x << endl;
+    cout << x << endl; // #1
+    doSomthing(x);
+    cout << x << endl; // #3
 
-    {
-        int x = 0;
-
-        cout << x << " " << &x << endl;
-
-    }
     return 0;
 }
