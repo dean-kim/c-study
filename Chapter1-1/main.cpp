@@ -5,12 +5,29 @@
 #include <iostream>
 #include "add.h"
 
+
+namespace MySpace1
+{
+    int doSomething(int a, int b)
+    {
+        return a + b;
+    }
+}
+
+int doSomething(int a, int b)
+{
+    return a * b;
+}
+
+
 using namespace std;
 
 
 int main()
 {
-    cout << add(1, 2) << endl;
+    cout << MySpace1::doSomething(1, 2) << endl;
+
+    cout << doSomething(1, 2) << endl;
 
     return 0;
 }
