@@ -7,12 +7,17 @@
 
 using namespace std;
 
-#define MY_NUMBER(a, b) ((a > b) ? a : b)
+#define LIKE_APPLE
 
 int main()
 {
+#ifdef LIKE_APPLE
+    cout << "Apple" << endl;
+#endif
 
-    cout << MY_NUMBER(2, 3) << endl;
+#ifndef LIKE_APPLE
+    cout << "Orange" << endl;
+#endif
 
     return 0;
 }
