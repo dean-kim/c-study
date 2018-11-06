@@ -7,35 +7,58 @@
 #include <limits>
 #include <cmath>
 
+bool isEqual(int a, int b)
+{
+    bool result = (a == b);
+
+    return result;
+}
+
 int main()
 {
     using namespace std;
 
-    float f(3.141592f);  // if 'f' doesn't exist c++ convert float type
-    double d;
-    long double ld;
-    double zero = 0.0;
-    double posinf = 5.0 / zero;
-    double neginf = -5.0 / zero;
-    double nan = zero / zero;
+    // boolean is number to computer
+    bool b1 = true; // copy initialization
+    bool b2(false); // direct initialization
+    bool b3{ true }; // uniform initialization
+    b3 = false;
 
-    cout << sizeof(float) << endl;
-    cout << sizeof(d) << endl;
-    cout << sizeof(ld) << endl;
-    cout << numeric_limits<float>::lowest() << endl;
-    cout << numeric_limits<double>::lowest() << endl;
-    cout << numeric_limits<long double>::lowest() << endl;
-    cout << 31.4e-1 << endl;
-    cout << 31.4e-2 << endl;
-    cout << 31.4e1 << endl;
-    cout << 31.4e+1 << endl;
-    cout << 31.4e2 << endl;
-    cout << std::setprecision(16) << endl;
-    cout << 1.0 / 3.0 << endl;
-    cout << posinf << " " << std::isnan(posinf) << endl;
-    cout << neginf << " " << std::isnan(neginf) << endl;
-    cout << nan << " " << std::isnan(nan) << endl;
-    cout << 1.0 << " " << std::isnan(1.0) << endl;
+    cout << std::boolalpha; // true, false out not number
+    //cout << std::noboolalpha; // true, false out number
+
+    cout << b3 << endl;
+    cout << b1 << endl;
+    cout << !b1 << endl;
+    cout << !true << endl;
+    cout << (true && false) << endl;
+    cout << (true && true) << endl;
+    cout << (false && false) << endl;
+    cout << (false && true) << endl;
+    cout << (true || false) << endl;
+    cout << (true || true) << endl;
+    cout << (false || true) << endl;
+    cout << (false || false) << endl;
+
+    if(false)
+    {
+        cout << "This is true" << endl;
+        cout << "This is true second line" << endl;
+    }
+    else
+    {
+        cout << "This is false" << endl;
+        cout << "This is false second line" << endl;
+    }
+
+    cout << isEqual(1, 1) << endl;
+    cout << isEqual(1, 3) << endl;
+
+    if (5)
+    {
+        cout << "True" << endl;
+    } else
+        cout << "False" << endl;
 
     return 0;
 
