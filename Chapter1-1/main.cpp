@@ -16,6 +16,9 @@ int main()
     short maxN = 32768; // overflow
     short minN = -32769;
     short some = 40000;
+    unsigned int ii = -1; // 4294967295 because of overflow
+    int rt = 20 / 4;
+    int yt = 22 / 4;
 
     cout << sizeof(s) << endl;
     cout << sizeof(i) << endl;
@@ -27,6 +30,12 @@ int main()
     cout << maxN << endl;
     cout << minN << endl;
     cout << some << endl;
+    cout << ii << endl;
+    cout << rt << endl;
+    cout << yt << endl;
+    cout << 22 / 4 << endl; // 5 because of cal between integer
+    cout << (float)22 / 4 << endl; // 5.5 depends on type of element in expression
+    cout << 22 / (float)4 << endl; // 5.5 depends on type of element in expression
 
     return 0;
 
