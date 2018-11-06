@@ -5,17 +5,21 @@
 #include <iostream>
 //#include <cstdint>
 
+void m_function()
+{
+
+}
+
 int main()
 {
-    using namespace std;
+    // void my_void;
+    int i =123;
+    float f = 123.456f;
 
-    std::int16_t i(5);
-    std::int8_t myint = 65;
+    void *my_void;
 
-    cout << myint << endl;
-
-    std::int_fast8_t fi(5);
-    std::int_least64_t fl(5);
+    my_void = (void*)&i;
+    my_void = (void*)&f;
 
     return 0;
 
