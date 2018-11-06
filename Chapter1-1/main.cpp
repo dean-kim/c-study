@@ -3,41 +3,30 @@
 //
 
 #include <iostream>
-#include <bitset>
+#include <limits>
 
 int main()
 {
     using namespace std;
 
-    bool bValue = true;
-    char chValue = 'A';
-    char numCh = 65;
-    float fValue = 3.141592f;
-    double dValue = 3.141592;
-    auto aValue = 3.141592;
-    int q(123); // direct initialization
-    int b{ 123 }; // uniform initialization - more strict than direct initialization
-    int i = 3.141592; // save as 3, called "casting" / copy initialization
+    short s = 1;  // 2 bytes = 2 * 8 bits = 16 bits
+    int i = 1;
+    long l = 1;
+    long long ll = 1;
+    short maxN = 32768; // overflow
+    short minN = -32769;
+    short some = 40000;
 
-    cout << (bValue ? 1 : 0) << endl;
-    cout << chValue << endl;
-    cout << (int)chValue << endl;
-    cout << numCh << endl;
-    cout << fValue << endl;
-    cout << dValue << endl;
-    cout << aValue << endl;
-    cout << sizeof(bool) << endl;
-    cout << sizeof(bValue) << endl;
-    cout << q << endl;
-    cout << b << endl;
-
-    int j = 3;
-    int i = -1;
-    int k = 123;
-    char a = 'H';
-
-    cout << (uintptr_t) static_cast<void*>(&a) << endl;
-    cout << (uintptr_t) static_cast<void*>(&i) << endl;
+    cout << sizeof(s) << endl;
+    cout << sizeof(i) << endl;
+    cout << sizeof(l) << endl;
+    cout << sizeof(ll) << endl;
+    cout << std::numeric_limits<short>::max() << endl;
+    cout << std::numeric_limits<short>::min() << endl;
+    cout << std::numeric_limits<short>::lowest() << endl;
+    cout << maxN << endl;
+    cout << minN << endl;
+    cout << some << endl;
 
     return 0;
 
