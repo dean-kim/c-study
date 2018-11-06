@@ -5,7 +5,7 @@
 #include <iostream>
 #include <iomanip>
 #include <limits>
-
+#include <cmath>
 
 int main()
 {
@@ -14,6 +14,10 @@ int main()
     float f(3.141592f);  // if 'f' doesn't exist c++ convert float type
     double d;
     long double ld;
+    double zero = 0.0;
+    double posinf = 5.0 / zero;
+    double neginf = -5.0 / zero;
+    double nan = zero / zero;
 
     cout << sizeof(float) << endl;
     cout << sizeof(d) << endl;
@@ -28,6 +32,10 @@ int main()
     cout << 31.4e2 << endl;
     cout << std::setprecision(16) << endl;
     cout << 1.0 / 3.0 << endl;
+    cout << posinf << " " << std::isnan(posinf) << endl;
+    cout << neginf << " " << std::isnan(neginf) << endl;
+    cout << nan << " " << std::isnan(nan) << endl;
+    cout << 1.0 << " " << std::isnan(1.0) << endl;
 
     return 0;
 
