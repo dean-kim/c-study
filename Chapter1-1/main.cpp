@@ -3,23 +3,31 @@
 //
 
 #include <iostream>
-//#include <cstdint>
+#include <iomanip>
+#include <limits>
 
-void m_function()
-{
-
-}
 
 int main()
 {
-    // void my_void;
-    int i =123;
-    float f = 123.456f;
+    using namespace std;
 
-    void *my_void;
+    float f(3.141592f);  // if 'f' doesn't exist c++ convert float type
+    double d;
+    long double ld;
 
-    my_void = (void*)&i;
-    my_void = (void*)&f;
+    cout << sizeof(float) << endl;
+    cout << sizeof(d) << endl;
+    cout << sizeof(ld) << endl;
+    cout << numeric_limits<float>::lowest() << endl;
+    cout << numeric_limits<double>::lowest() << endl;
+    cout << numeric_limits<long double>::lowest() << endl;
+    cout << 31.4e-1 << endl;
+    cout << 31.4e-2 << endl;
+    cout << 31.4e1 << endl;
+    cout << 31.4e+1 << endl;
+    cout << 31.4e2 << endl;
+    cout << std::setprecision(16) << endl;
+    cout << 1.0 / 3.0 << endl;
 
     return 0;
 
