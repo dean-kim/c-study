@@ -6,20 +6,29 @@
 
 using namespace std;
 
-int add(int x, int y) {
-    return x + y;
-}
+// forward declaration
+int add(int a, int b);
+int multiply(int a, int b);
+int subtract(int a, int b);
 
 int main()
 {
-    int x          = 4;
-    int num_apples = 123;
-
-    // this is important
-    int my_v       = 1;
-
-    cout << "Hello World" << "Hello Korea" <<
-    "Hello Seoul" << endl;
+    cout << add(1, 2) << endl;
+    cout << multiply(1, 2) << endl;
+    cout << subtract(1, 2) << endl;
 
     return 0;
+}
+
+// definition
+int add(int a, int b) {
+    return a + b;
+}
+
+int multiply(int a, int b) {
+    return a * b;
+}
+
+int subtract(int a, int b) {
+    return a - b;
 }
