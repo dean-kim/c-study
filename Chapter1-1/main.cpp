@@ -3,42 +3,36 @@
 //
 
 #include <iostream>
-#include <limits>
 
 int main()
 {
     using namespace std;
 
-    char c1(65);
-    char c2('A'); // "Hello World"
+    unsigned int n = 5u;
+    long n2 = 5L;
+    double d = 6.0e-10;
 
-    cout << c1 << " " << c2 << " " << int(c1) << " " << int(c2) << endl;
+    // decimal : 0 1 2 3 4 5 6 7 8 9 10
+    // octal: 0 1 2 3 4 5 6 7 10 11 12 13
+    // hexa : 0 1 2 3 4 5 6 7 8 9 A B C D E F 10
 
-    // c- style casting
-    cout << (char)65 << endl;
-    cout << (int)'A' << endl;
+    // decimal
+    int x = 12;
 
-    // cpp style casting
-    cout << char(65) << endl;
-    cout << int('A') << endl;
+    // octal
+    int y = 012;
+    cout << y << endl;
 
-    cout << static_cast<char>(65) << endl;
-    cout << static_cast<int>('A') << endl;
+    // hexa
+    int z = 0xF;
+    cout << z << endl;
 
-    char ch(97);
-    cout << ch << endl;
-    cout << static_cast<int>(ch) << endl;
-    cout << ch << endl;
+    // binary
+    int xx = 0b1010;
+    int xxx = 0b101010111111;
+    cout << xx << endl;
+    cout << xxx << endl;
 
-    cout << sizeof(char) << endl;
-    cout << (int)std::numeric_limits<char>::max() << endl;
-    cout << (int)std::numeric_limits<char>::lowest() << endl;
-
-    cout << int('\n') << endl;
-
-    cout << "This is 1st line \t 2nd line" << endl;
-    cout << "This is 1st line " << endl;
-    cout << "This is 2nd line " << endl;
 
     return 0;
 
