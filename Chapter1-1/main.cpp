@@ -3,62 +3,42 @@
 //
 
 #include <iostream>
-#include <iomanip>
 #include <limits>
-#include <cmath>
-
-bool isEqual(int a, int b)
-{
-    bool result = (a == b);
-
-    return result;
-}
 
 int main()
 {
     using namespace std;
 
-    // boolean is number to computer
-    bool b1 = true; // copy initialization
-    bool b2(false); // direct initialization
-    bool b3{ true }; // uniform initialization
-    b3 = false;
+    char c1(65);
+    char c2('A'); // "Hello World"
 
-    cout << std::boolalpha; // true, false out not number
-    //cout << std::noboolalpha; // true, false out number
+    cout << c1 << " " << c2 << " " << int(c1) << " " << int(c2) << endl;
 
-    cout << b3 << endl;
-    cout << b1 << endl;
-    cout << !b1 << endl;
-    cout << !true << endl;
-    cout << (true && false) << endl;
-    cout << (true && true) << endl;
-    cout << (false && false) << endl;
-    cout << (false && true) << endl;
-    cout << (true || false) << endl;
-    cout << (true || true) << endl;
-    cout << (false || true) << endl;
-    cout << (false || false) << endl;
+    // c- style casting
+    cout << (char)65 << endl;
+    cout << (int)'A' << endl;
 
-    if(false)
-    {
-        cout << "This is true" << endl;
-        cout << "This is true second line" << endl;
-    }
-    else
-    {
-        cout << "This is false" << endl;
-        cout << "This is false second line" << endl;
-    }
+    // cpp style casting
+    cout << char(65) << endl;
+    cout << int('A') << endl;
 
-    cout << isEqual(1, 1) << endl;
-    cout << isEqual(1, 3) << endl;
+    cout << static_cast<char>(65) << endl;
+    cout << static_cast<int>('A') << endl;
 
-    if (5)
-    {
-        cout << "True" << endl;
-    } else
-        cout << "False" << endl;
+    char ch(97);
+    cout << ch << endl;
+    cout << static_cast<int>(ch) << endl;
+    cout << ch << endl;
+
+    cout << sizeof(char) << endl;
+    cout << (int)std::numeric_limits<char>::max() << endl;
+    cout << (int)std::numeric_limits<char>::lowest() << endl;
+
+    cout << int('\n') << endl;
+
+    cout << "This is 1st line \t 2nd line" << endl;
+    cout << "This is 1st line " << endl;
+    cout << "This is 2nd line " << endl;
 
     return 0;
 
