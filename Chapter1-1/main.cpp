@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
@@ -10,33 +11,19 @@ using namespace std;
 int main()
 {
 
-    // comma operator
-    int x = 3;
-    int y = 10;
-    int z = (++x, ++y);
-    int zz = (x++, x + y);
+    double d1(100 - 99.99); // 0.001
+    double d2(10 - 9.99);   // 0.001
 
-    cout << x << " " << y << " " << z << endl;
-    cout << zz << endl;
+    cout << std::setprecision(16) << endl;
+    cout << d1 << endl;
+    cout << d2 << endl;
 
-    // conditional operator (arithmetric if)
-    bool onSale = true;
-//    if(onSale)
-//        price = 10;
-//    else
-//        price = 100;
-//
+    if (d1 == d2)
+        cout << "Equal" << endl;
+    else
+        cout << "Different" << endl;
 
-    // same result above if statement
-    const int price = (onSale == true)? 10 : 100;
-
-
-    cout << price << endl;
-
-    int xxx = 5;
-
-    cout << ((x % 2 == 0) ? "even" : "odd") << endl;
-
+    cout << d1 - d2 << endl;
 
     return 0;
 
