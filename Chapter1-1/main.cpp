@@ -33,6 +33,10 @@ int main()
 
     cout << price << endl;
 
+    int xxx = 5;
+
+    cout << ((x % 2 == 0) ? "even" : "odd") << endl;
+
 
     return 0;
 
