@@ -3,35 +3,36 @@
 //
 
 #include <iostream>
+#include "add.h"
+
+using namespace std;
+
 
 int main()
 {
-    using namespace std;
 
-    unsigned int n = 5u;
-    long n2 = 5L;
-    double d = 6.0e-10;
+    // set variable when compile time
+    constexpr int my_const(123);
 
-    // decimal : 0 1 2 3 4 5 6 7 8 9 10
-    // octal: 0 1 2 3 4 5 6 7 10 11 12 13
-    // hexa : 0 1 2 3 4 5 6 7 8 9 A B C D E F 10
+    int number = 121;
 
-    // decimal
-    int x = 12;
 
-    // octal
-    int y = 012;
-    cout << y << endl;
+    // set variable when run time
+    const int special_number(number);
 
-    // hexa
-    int z = 0xF;
-    cout << z << endl;
+    // declare const valuable must be initialized
+    const double gravity{ 9.8 };
 
-    // binary
-    int xx = 0b1010;
-    int xxx = 0b101010111111;
-    cout << xx << endl;
-    cout << xxx << endl;
+    // gravity = 1.2; -> not working
+
+    const int price_per_item = 30;
+    int num_item = 12;
+    int price = num_item * price_per_item;
+
+    double circum = 2.0 * num_item * constants::pi;
+
+    cout << circum << endl;
+
 
 
     return 0;
