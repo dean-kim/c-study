@@ -56,6 +56,21 @@ int main()
         // do something
     }
 
+
+    // '&&' with '||' case
+    // '&&' is higher than '||'
+    bool v1 = true;
+    bool v2 = false;
+    bool v3 = false;
+
+    bool r1 = v1 || v2 && v3;
+    bool r2 = (v1 || v2) && v3;
+    bool r3 = v1 || (v2 && v3);
+
+    cout << r1 << endl;
+    cout << r2 << endl;
+    cout << r3 << endl;
+
     return 0;
 
 }
