@@ -11,19 +11,50 @@ using namespace std;
 int main()
 {
 
-    double d1(100 - 99.99); // 0.001
-    double d2(10 - 9.99);   // 0.001
+    // logical Not
+    bool x = true;
 
-    cout << std::setprecision(16) << endl;
-    cout << d1 << endl;
-    cout << d2 << endl;
+    cout << !x << endl;
 
-    if (d1 == d2)
-        cout << "Equal" << endl;
-    else
-        cout << "Different" << endl;
+    // logical And
+    bool y = true;
+    bool z = false;
 
-    cout << d1 - d2 << endl;
+    cout << (x && y) << endl;
+
+    // logical OR
+    cout << (y || z) << endl;
+
+    // short circuit evaluation
+    int a = 2;
+    int b = 2;
+
+    if (a == 1 && b++ == 2)
+    {
+        // do something
+    }
+
+    // cout b is 2 because of operator '&&', 'b++' is not working
+    cout << b << endl;
+
+    bool c = true;
+    bool d = false;
+
+    // De Morgan's Law
+    !(c || d);
+    !c && !y;
+
+    // XOR
+    // false false false
+    // false true true
+    // true false true
+    // true true false
+
+    // Because of c++ does not have XOR operator, if need XOR operator refer below statement.
+    if (y != z)
+    {
+        // do something
+    }
 
     return 0;
 
