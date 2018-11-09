@@ -7,48 +7,31 @@
 
 using namespace std;
 
-// if use nested namespace -> namespace work1::work::11....
+int a = 1;
 
-namespace work1
+int value = 123;
+void doSomething()
 {
-    int a =1;
-    void doSomething()
-    {
-        a += 3;
-    }
-}
+    // same return global variable / 'static' means declare memory address and initialization only one time
+    //static int a = 1;
 
-namespace work2
-{
-    int a =1;
-    void doSomething()
-    {
-        a += 5;
-    }
-}
+    ++a;
 
+    cout << a << endl;
+}
 
 int main()
 {
 
-    // '::' scope resolution operator
-    work1::a;
-    work1::doSomething();
+    doSomething();
+    doSomething();
 
-    work2::a;
-    work2::doSomething();
+    cout << value << endl;
 
-    int apple = 5;
+    int value = 1;
 
-    cout << apple << endl;
-
-    {
-        int apple2 = 1;
-
-        cout << apple2 << endl;
-    }
-
-    cout << apple << endl;
+    cout << ::value << endl;
+    cout << value << endl;
 
     return 0;
 
