@@ -9,6 +9,14 @@ using namespace std;
 
 int g_a = 1;
 
+// can't access from other cpp file
+// static int g_a = 1;
+
+// exteranl linkage -> for access from other cpp file
+// forward declaration
+// define function in other cpp file
+// extern void doSomething();
+
 int value = 123;
 void doSomething()
 {
