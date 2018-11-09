@@ -9,6 +9,22 @@ using namespace std;
 
 int g_a = 1;
 
+/*
+ int g_x; // external linkage
+ static int g_x; // internal linkage
+ const int g_x // err
+
+ extern int g_z;
+ extern const int g_z;
+
+ int g_y(1);
+ static int g_y(1);
+ const int g_y(1);
+
+ extern int g_w(1);
+ extern const int g_w(1);
+ */
+
 // can't access from other cpp file
 // static int g_a = 1;
 
