@@ -7,33 +7,48 @@
 
 using namespace std;
 
+// if use nested namespace -> namespace work1::work::11....
+
+namespace work1
+{
+    int a =1;
+    void doSomething()
+    {
+        a += 3;
+    }
+}
+
+namespace work2
+{
+    int a =1;
+    void doSomething()
+    {
+        a += 5;
+    }
+}
+
 
 int main()
 {
 
-    const unsigned int red_mask = 0xFF0000;
-    const unsigned int green_mask = 0x00FF00;
-    const unsigned int blue_mask = 0x0000FF;
+    // '::' scope resolution operator
+    work1::a;
+    work1::doSomething();
 
+    work2::a;
+    work2::doSomething();
 
-    cout << std::bitset<32>(red_mask) << endl;
-    cout << std::bitset<32>(green_mask) << endl;
-    cout << std::bitset<32>(blue_mask) << endl;
+    int apple = 5;
 
-    unsigned int pixel_color = 0xDAA520;
+    cout << apple << endl;
 
-    cout << std::bitset<32>(pixel_color) << endl;
+    {
+        int apple2 = 1;
 
-    unsigned char red = (pixel_color & red_mask) >> 16;
-    unsigned char green = (pixel_color & green_mask) >> 8;
-    unsigned char blue = pixel_color & blue_mask;
+        cout << apple2 << endl;
+    }
 
-    cout << "red " << std::bitset<8>(red) << " " << int(red) << endl;
-    cout << "green " << std::bitset<8>(green) << " " << int(green) << endl;
-    cout << "blue " << std::bitset<8>(blue) << " " << int(blue) << endl;
-
-
-//    unsigned char red, green, blue;
+    cout << apple << endl;
 
     return 0;
 
