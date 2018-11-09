@@ -20,7 +20,7 @@
 # Compiled Static libraries
 *.lai
 *.la
-*.a
+*.g_a
 *.lib
 
 # Executables

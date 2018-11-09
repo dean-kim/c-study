@@ -7,7 +7,7 @@
 
 using namespace std;
 
-int a = 1;
+int g_a = 1;
 
 int value = 123;
 void doSomething()
@@ -15,9 +15,9 @@ void doSomething()
     // same return global variable / 'static' means declare memory address and initialization only one time
     //static int a = 1;
 
-    ++a;
+    ++g_a;
 
-    cout << a << endl;
+    cout << g_a << endl;
 }
 
 int main()
