@@ -11,52 +11,69 @@ using namespace std;
 int main()
 {
 
-    // Bitwise Operators
-    // << left shift
-    // >> right shift
-    // ~, &, |, ^
+    const unsigned char opt0 = 1 << 0;
+    const unsigned char opt1 = 1 << 1;
+    const unsigned char opt2 = 1 << 2;
+    const unsigned char opt3 = 1 << 3;
 
-    unsigned int a = 3;
+    cout << bitset<8>(opt0) << endl;
+    cout << bitset<8>(opt1) << endl;
+    cout << bitset<8>(opt2) << endl;
+    cout << bitset<8>(opt3) << endl;
 
-    cout << std::bitset<4>(a) << endl;
+    unsigned char items_flag = 0;
 
-    unsigned int b = a << 2;
+    cout << "No item" << bitset<8>(items_flag) << endl;
 
-    cout << std::bitset<4>(b) << " " << b << endl;
+    // item0 on
+    items_flag |= opt0;
 
-    unsigned int c = 1024;
+    cout << "item0 obtained " << bitset<8>(items_flag) << endl;
 
-    cout << std::bitset<16>(c >> 1) << " " << (c >> 1) << endl;
-    cout << std::bitset<16>(c >> 2) << " " << (c >> 2) << endl;
-    cout << std::bitset<16>(c >> 3) << " " << (c >> 3) << endl;
-    cout << std::bitset<16>(c >> 4) << " " << (c >> 4) << endl;
+    // item3 on
+    items_flag |= opt3;
 
-    cout << std::bitset<16>(c) << " " << (c) << endl;
-    cout << std::bitset<16>(~c) << " " << (~c) << endl;
+    cout << "item3 obtained " << bitset<8>(items_flag) << endl;
 
-    unsigned int e = 0b1100;
-    unsigned int f = 0b0110;
+    // item3 lost
+    items_flag &= ~opt3;
 
-    // Bitwise AND
-    cout << std::bitset<4>(e & f) << endl;
-    // Bitwise OR
-    cout << std::bitset<4>(e | f) << endl;
-    // Bitwise XOR
-    cout << std::bitset<4>(e ^ f) << endl;
+    cout << "item3 lost " << bitset<8>(items_flag) << endl;
 
-    // Possible
-    a &= b;
+    // has item0?
+    if (items_flag & opt0)
+    {
+        cout << "Has item0" << endl;
+    }
+    else
+        {
+        cout << "Not has item0" << endl;
+    }
 
-    // Quiz
-    // 0110 >> 2 -> decimal
-    cout << std::bitset<8>(0b0110 >> 2) << " " << (0b0110 >> 2) << endl;
-    // 5 | 12
-    cout << std::bitset<8>(5 | 12) << " " << (5 | 12) << endl;
-    // 5 & 12
-    cout << std::bitset<8>(5 & 12) << " " << (5 & 12) << endl;
-    // 5 ^ 12
-    cout << std::bitset<8>(5 ^ 12) << " " << (5 ^ 12) << endl;
+    // has item1?
+    if (items_flag & opt1)
+    {
+        cout << "Has item1" << endl;
+    }
+    else
+    {
+        cout << "Not has item1" << endl;
+    }
 
+    // obtain item 2, 3
+    items_flag |= (opt2 | opt3);
+
+    cout << bitset<8>(opt2 | opt3) << endl;
+    cout << "item2, 3 obtained " << bitset<8>(items_flag) << endl;
+
+    if ((items_flag & opt2) && !(items_flag & opt1))
+    {
+//        items_flag ^= opt2;
+//        items_flag ^= opt1;
+        items_flag ^= (opt2 | opt1);
+    }
+
+    cout << bitset<8>(items_flag) << endl;
 
     return 0;
 
