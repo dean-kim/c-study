@@ -5,57 +5,42 @@
 #include <iostream>
 #include <bitset>
 
-using namespace std;
-
-int g_a = 1;
-
-/*
- int g_x; // external linkage
- static int g_x; // internal linkage
- const int g_x // err
-
- extern int g_z;
- extern const int g_z;
-
- int g_y(1);
- static int g_y(1);
- const int g_y(1);
-
- extern int g_w(1);
- extern const int g_w(1);
- */
-
-// can't access from other cpp file
-// static int g_a = 1;
-
-// exteranl linkage -> for access from other cpp file
-// forward declaration
-// define function in other cpp file
-// extern void doSomething();
-
-int value = 123;
-void doSomething()
+namespace a
 {
-    // same return global variable / 'static' means declare memory address and initialization only one time
-    //static int a = 1;
+    int my_var(10);
+    int my_a(123);
+    int count(123123123);
+}
 
-    ++g_a;
-
-    cout << g_a << endl;
+namespace b
+{
+    int my_var(20);
+    int my_b(456);
 }
 
 int main()
 {
 
-    doSomething();
-    doSomething();
+    using namespace std;
 
-    cout << value << endl;
+//    using std::cout;
+//    using std::endl;
 
-    int value = 1;
+    cout << "Hello" << endl;
 
-    cout << ::value << endl;
-    cout << value << endl;
+    {
+        using namespace a;
+        cout << my_var << endl;
+//        cout << count << endl; // duplicated with count in std
+    }
+
+    {
+        using namespace b;
+        cout << b::my_var << endl;
+    }
+
+//    cout << my_a << endl;
+//    cout << my_b << endl;
 
     return 0;
 
