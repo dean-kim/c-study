@@ -3,7 +3,7 @@
 //
 
 #include <iostream>
-#include <iomanip>
+#include <bitset>
 
 using namespace std;
 
@@ -11,65 +11,52 @@ using namespace std;
 int main()
 {
 
-    // logical Not
-    bool x = true;
+    // Bitwise Operators
+    // << left shift
+    // >> right shift
+    // ~, &, |, ^
 
-    cout << !x << endl;
+    unsigned int a = 3;
 
-    // logical And
-    bool y = true;
-    bool z = false;
+    cout << std::bitset<4>(a) << endl;
 
-    cout << (x && y) << endl;
+    unsigned int b = a << 2;
 
-    // logical OR
-    cout << (y || z) << endl;
+    cout << std::bitset<4>(b) << " " << b << endl;
 
-    // short circuit evaluation
-    int a = 2;
-    int b = 2;
+    unsigned int c = 1024;
 
-    if (a == 1 && b++ == 2)
-    {
-        // do something
-    }
+    cout << std::bitset<16>(c >> 1) << " " << (c >> 1) << endl;
+    cout << std::bitset<16>(c >> 2) << " " << (c >> 2) << endl;
+    cout << std::bitset<16>(c >> 3) << " " << (c >> 3) << endl;
+    cout << std::bitset<16>(c >> 4) << " " << (c >> 4) << endl;
 
-    // cout b is 2 because of operator '&&', 'b++' is not working
-    cout << b << endl;
+    cout << std::bitset<16>(c) << " " << (c) << endl;
+    cout << std::bitset<16>(~c) << " " << (~c) << endl;
 
-    bool c = true;
-    bool d = false;
+    unsigned int e = 0b1100;
+    unsigned int f = 0b0110;
 
-    // De Morgan's Law
-    !(c || d);
-    !c && !y;
+    // Bitwise AND
+    cout << std::bitset<4>(e & f) << endl;
+    // Bitwise OR
+    cout << std::bitset<4>(e | f) << endl;
+    // Bitwise XOR
+    cout << std::bitset<4>(e ^ f) << endl;
 
-    // XOR
-    // false false false
-    // false true true
-    // true false true
-    // true true false
+    // Possible
+    a &= b;
 
-    // Because of c++ does not have XOR operator, if need XOR operator refer below statement.
-    if (y != z)
-    {
-        // do something
-    }
+    // Quiz
+    // 0110 >> 2 -> decimal
+    cout << std::bitset<8>(0b0110 >> 2) << " " << (0b0110 >> 2) << endl;
+    // 5 | 12
+    cout << std::bitset<8>(5 | 12) << " " << (5 | 12) << endl;
+    // 5 & 12
+    cout << std::bitset<8>(5 & 12) << " " << (5 & 12) << endl;
+    // 5 ^ 12
+    cout << std::bitset<8>(5 ^ 12) << " " << (5 ^ 12) << endl;
 
-
-    // '&&' with '||' case
-    // '&&' is higher than '||'
-    bool v1 = true;
-    bool v2 = false;
-    bool v3 = false;
-
-    bool r1 = v1 || v2 && v3;
-    bool r2 = (v1 || v2) && v3;
-    bool r3 = v1 || (v2 && v3);
-
-    cout << r1 << endl;
-    cout << r2 << endl;
-    cout << r3 << endl;
 
     return 0;
 
