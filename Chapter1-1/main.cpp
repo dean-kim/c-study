@@ -3,27 +3,44 @@
 //
 
 #include <iostream>
-#include <bitset>
-
-// template
-
-
-auto add(int x, int y) -> int // trailing
-{
-    return x + y;
-}
+#include <typeinfo>
+#include <iomanip>
 
 int main()
 {
 
     using namespace std;
 
-    // auto must use with initialization
-//    auto a; // not working
-    auto a = 123;
-    auto b = 123.0;
-    auto c = 1 + 2.0;
-    auto result = add(1, 2);
+    // numeric conversion
+    int i = 30000;
+    char c = i;
+
+//    cout << static_cast<int>(c) <<endl;
+
+    double d = 0.123456789;
+    float f = d;
+
+    cout << std::setprecision(12) << f << endl;
+    cout << std::setprecision(12) << d << endl;
+
+    float pi = 3.14;
+    int pp = pi;
+
+    cout << std::setprecision(12) << pi << endl;
+    cout << std::setprecision(12) << pp << endl;
+
+    // when type conversion, conversion is depends on precedence
+    // precedence : int < unsigned int < long < unsigned long < long long < unsigned long long < float < double < long double
+    cout << 5u - 10 << endl;
+    cout << 5 - 10 << endl;
+    cout << 5u - 10u << endl;
+
+
+    // 명시적 형변환
+    int q = int(4.0);
+    // c style casting -> (int)4.0;
+    // static_cast<int>(4.0);
+
 
     return 0;
 
