@@ -13,11 +13,19 @@ using namespace std;
 int main()
 {
 
-    cout << "I love you " << endl;
+    int x;
+    cin >> x;
 
-    exit(0);
-
-    cout << "I love you, too" << endl;
+    if (x > 10)
+    {
+        cout << x << " is greater than 10" << endl;
+        cout << "Test 1" << endl;
+    }
+    else
+    {
+        cout << x << " is not greater than 10" << endl;
+        cout << "Test 1" << endl;
+    }
 
     return 0;
 
