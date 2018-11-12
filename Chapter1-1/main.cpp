@@ -26,9 +26,11 @@ int main()
     int x;
     cin >> x;
 
-    if (x > 10)
-        ; // null statement -> do nothing
-    
+    if (x = 0)
+        cout << x << endl;
+
+    cout << x << endl;
+
 
     return 0;
 
