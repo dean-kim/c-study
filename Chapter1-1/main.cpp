@@ -13,20 +13,14 @@ using namespace std;
 int main()
 {
 
-    int count = 0;
-
-    while(count < 10)
-    {
-        cout << count << endl;
-        ++count;
-    }
-
-//    while(1)
-//    {
-//        cout << count << endl;
-//        ++count;
+    // this is infinite loop, because of overflow
+//    unsigned int count = 10;
 //
-//        if (count == 10) break;
+//    while (count >= 0)
+//    {
+//        if (count == 0) cout << "0";
+//        else cout << count << " ";
+//        count--;
 //    }
 
     return 0;
