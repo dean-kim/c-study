@@ -11,19 +11,13 @@ using namespace std;
 int main()
 {
 
-    cout << "your age ? : ";
-    int age;
-    cin >> age;
-    //std::getline(std::cin, age);
-    //std::cin.ignore(32767, '\n');
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    string a("Hello, ");
+    string b("World.");
+    string hw = a + b; // append
 
-    cout << "Your name ? : ";
-    string name;
-    //cin >> name;
-    std::getline(std::cin, name);
+    hw += " I'm good";
 
-    cout << name << " " << age <<endl;
+    cout << hw << endl;
 
     return 0;
 
