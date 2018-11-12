@@ -5,35 +5,25 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <cstdlib>
+#include <cmath>
 
 using namespace std;
 
 
 int main()
 {
-    int x;
+    double x;
+
+    tryAgain : // label
+
+    cout << "Enter a non-negative number" << endl;
+
     cin >> x;
 
-    // in switch can variable declare but can not assign or initialization
-    switch (x)
-    {
+    if (x < 0.0)
+        goto tryAgain;
 
-        case 0:
-            // same declare variable outside of case
-            int y;
-            cout << y << endl;
-            break;
-        case 1:
-            // y is declare in case 0 but it is same result of declare outside of case
-            // so assignment is possible
-            y = 5;
-            break;
-
-        default:
-            cout << "undefined input" << endl;
-            break;
-    }
+    cout << sqrt(x) << endl;
 
     return 0;
 
