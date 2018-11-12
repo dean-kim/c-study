@@ -9,17 +9,45 @@
 
 using namespace std;
 
+struct Person
+{
+    double height;
+    float weight;
+    int age;
+    string name;
+
+    void print()
+    {
+        cout << height << " " << weight << " " << name << " " << age << endl;
+    }
+
+};
+
+struct Family {
+    Person me, mom, dad;
+};
+
+Person getMe()
+{
+    Person me{2.0, 100.0, 20, "Jack Jack"};
+
+    return me;
+}
+
+
 int main()
 {
 
-    typedef std::vector<std::pair<std::string, int> > pairlist_t;
-    //using pairlist_t = vector<pair<string, int> >;
+    Person me_from_func = getMe();
+    me_from_func.print();
 
-    pairlist_t pairlist1;
-    //vector<pair<string, int> > pairlist1;
+    //Person me{2.0, 100.0, 20, "Jack Jack"};
+    //me.print();
 
-    pairlist_t pairlist2;
-    //vector<pair<string, int> > pairlist2;
+    //Person me2(me);
+    //me2 = me;
+    //me2.print();
+
 
     return 0;
 
