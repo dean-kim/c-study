@@ -9,52 +9,31 @@
 
 using namespace std;
 
-enum class Colors
-{
-    BLACK,
-    WHITE,
-    RED,
-    GREEN,
-    BLUE,
-};
-
-void printColorName(Colors color)
-{
-    switch (static_cast<int>(color))
-    {
-        case 0 :
-            cout << "Black" << endl;
-            break;
-        case 1 :
-            cout << "White" << endl;
-            break;
-    }
-
-}
 
 int main()
 {
-    printColorName(Colors::BLACK);
-    printColorName(Colors::WHITE);
+    int x;
+    cin >> x;
 
-//    int x;
-//    cin >> x;
-//
-//    {
-//        switch (x)
-//        {
-//            case 0:
-//                cout << "Zero";
-//                break;
-//            case 1:
-//                cout << "One";
-//                break;
-//            case 2:
-//                cout << "Two";
-//                break;
-//        }
-//        cout << endl;
-//    }
+    // in switch can variable declare but can not assign or initialization
+    switch (x)
+    {
+
+        case 0:
+            // same declare variable outside of case
+            int y;
+            cout << y << endl;
+            break;
+        case 1:
+            // y is declare in case 0 but it is same result of declare outside of case
+            // so assignment is possible
+            y = 5;
+            break;
+
+        default:
+            cout << "undefined input" << endl;
+            break;
+    }
 
     return 0;
 
