@@ -11,13 +11,9 @@ using namespace std;
 int main()
 {
 
-    string a("Hello, ");
-    string b("World.");
-    string hw = a + b; // append
+    string a("Hello, World");
 
-    hw += " I'm good";
-
-    cout << hw << endl;
+    cout << a.length() << endl;
 
     return 0;
 
