@@ -27,13 +27,8 @@ int main()
     cin >> x;
 
     if (x > 10)
-        cout << "A" << endl;
-    else if (x == -1)
-        return 0; // same result with 'exit(0);'
-    else if (x < 0)
-        cout << "B" << endl;
-
-    cout << "Hello" << endl;
+        ; // null statement -> do nothing
+    
 
     return 0;
 
