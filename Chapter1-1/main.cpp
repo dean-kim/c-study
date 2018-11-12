@@ -3,44 +3,22 @@
 //
 
 #include <iostream>
-#include <typeinfo>
-#include <iomanip>
+#include <string>
+
+
+using namespace std;
 
 int main()
 {
 
-    using namespace std;
+    const char mt_strs [] = "Hello World";
 
-    // numeric conversion
-    int i = 30000;
-    char c = i;
-
-//    cout << static_cast<int>(c) <<endl;
-
-    double d = 0.123456789;
-    float f = d;
-
-    cout << std::setprecision(12) << f << endl;
-    cout << std::setprecision(12) << d << endl;
-
-    float pi = 3.14;
-    int pp = pi;
-
-    cout << std::setprecision(12) << pi << endl;
-    cout << std::setprecision(12) << pp << endl;
-
-    // when type conversion, conversion is depends on precedence
-    // precedence : int < unsigned int < long < unsigned long < long long < unsigned long long < float < double < long double
-    cout << 5u - 10 << endl;
-    cout << 5 - 10 << endl;
-    cout << 5u - 10u << endl;
+    const string my_hello = "Hello World";
+//    const string my_hello("Hello World");
+//    const string my_hello{ "Hello World" };
 
 
-    // 명시적 형변환
-    int q = int(4.0);
-    // c style casting -> (int)4.0;
-    // static_cast<int>(4.0);
-
+    cout << my_hello << endl;
 
     return 0;
 
