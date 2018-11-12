@@ -16,16 +16,12 @@ int main()
     int x;
     cin >> x;
 
-    if (x > 10)
-    {
-        cout << x << " is greater than 10" << endl;
-        cout << "Test 1" << endl;
-    }
+    // print "1" because variable scope
+    if (1)
+        int x = 5; // -> {} is hiden
     else
-    {
-        cout << x << " is not greater than 10" << endl;
-        cout << "Test 1" << endl;
-    }
+        int x = 6;
+
 
     return 0;
 
