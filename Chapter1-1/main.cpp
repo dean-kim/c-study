@@ -5,25 +5,19 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <cstdint>
+#include <cstdlib>
 
 using namespace std;
-
-struct Person // 2 + (2) + 4 + 8 = 14 -> +(2) called padding
-{
-    short id; // 2 byte
-    int age; // 4 byte
-    double wage; // 8 byte
-};
-
 
 
 int main()
 {
 
-    Person emp1;
+    cout << "I love you " << endl;
 
-    cout << sizeof(Person) << endl;
+    exit(0);
+
+    cout << "I love you, too" << endl;
 
     return 0;
 
