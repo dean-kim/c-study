@@ -9,45 +9,21 @@
 
 using namespace std;
 
-struct Person
+struct Person // 2 + (2) + 4 + 8 = 14 -> +(2) called padding
 {
-    double height;
-    float weight;
-    int age;
-    string name;
-
-    void print()
-    {
-        cout << height << " " << weight << " " << name << " " << age << endl;
-    }
-
+    short id; // 2 byte
+    int age; // 4 byte
+    double wage; // 8 byte
 };
 
-struct Family {
-    Person me, mom, dad;
-};
-
-Person getMe()
-{
-    Person me{2.0, 100.0, 20, "Jack Jack"};
-
-    return me;
-}
 
 
 int main()
 {
 
-    Person me_from_func = getMe();
-    me_from_func.print();
+    Person emp1;
 
-    //Person me{2.0, 100.0, 20, "Jack Jack"};
-    //me.print();
-
-    //Person me2(me);
-    //me2 = me;
-    //me2.print();
-
+    cout << sizeof(Person) << endl;
 
     return 0;
 
