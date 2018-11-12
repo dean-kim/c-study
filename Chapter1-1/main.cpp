@@ -9,28 +9,47 @@
 
 using namespace std;
 
-int min(int x, int y)
+enum class Colors
 {
-    if (x > y)
-        return y;
-    else
-        return x;
+    BLACK,
+    WHITE,
+    RED,
+    GREEN,
+    BLUE,
+};
 
-    // same result
-    // return (x > y) ? y : x;
+void printColorName(Colors color)
+{
+//    if (color == Colors::BLACK)
+//        cout << "Black" << endl;
+//    else if (color == Colors::WHITE)
+//        cout << "White" << endl;
+//
+
+
 }
 
 int main()
 {
-
+//    printColorName(Colors::BLACK);
     int x;
     cin >> x;
 
-    if (x = 0)
-        cout << x << endl;
-
-    cout << x << endl;
-
+    {
+        switch (x)
+        {
+            case 0:
+                cout << "Zero";
+                break;
+            case 1:
+                cout << "One";
+                break;
+            case 2:
+                cout << "Two";
+                break;
+        }
+        cout << endl;
+    }
 
     return 0;
 
