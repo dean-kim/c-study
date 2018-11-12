@@ -12,18 +12,22 @@ using namespace std;
 
 int main()
 {
-    double x;
 
-    tryAgain : // label
+    int count = 0;
 
-    cout << "Enter a non-negative number" << endl;
+    while(count < 10)
+    {
+        cout << count << endl;
+        ++count;
+    }
 
-    cin >> x;
-
-    if (x < 0.0)
-        goto tryAgain;
-
-    cout << sqrt(x) << endl;
+//    while(1)
+//    {
+//        cout << count << endl;
+//        ++count;
+//
+//        if (count == 10) break;
+//    }
 
     return 0;
 
