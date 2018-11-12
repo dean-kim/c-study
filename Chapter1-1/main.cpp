@@ -8,42 +8,33 @@
 
 using namespace std;
 
-enum Color // user defined data types
-{
-    COLOR_BLACK,
-    COLOR_RED,
-    COLOR_BLUE,
-    COLOR_GREEN,
-    COLOR_SKYBLUE,
-};
-
 int main()
 {
 
-    int color_id = COLOR_RED;
-    // not Working
-    // Color my_color = color_id;
-    // but can casting
-    Color my_color = static_cast<Color>(3);
+    enum class Color
+    {
+        RED,
+        BLUE,
+    };
 
-    cout << color_id << endl;
-    cout << my_color << endl;
+    enum class Fruit
+    {
+        BANANA,
+        APPLE,
+    };
 
-    int in_number;
-    cin >> in_number;
+    Color color1 = Color::RED;
+    Color color2 = Color::BLUE;
 
-    if(in_number == static_cast<Color>(0)) my_color = static_cast<Color>(0);
+    Fruit fruit = Fruit::BANANA;
 
-    cout << my_color << endl;
+//    if (color == fruit)
+//        cout << "Color is fruit ? " << endl;
 
-    string str_input;
-
-    std::getline(cin, str_input);
-
-    if(str_input == "COLOR_BLACK") my_color = static_cast<Color>(0);
-
-    cout << my_color << endl;
-
+    if (color1 == color2)
+        cout << "Same color " << endl;
+    else
+        cout << "Different color" << endl;
 
     return 0;
 
