@@ -11,14 +11,17 @@ using namespace std;
 int main()
 {
 
-    const char mt_strs [] = "Hello World";
+    cout << "Your name ? : ";
+    string name;
+    //cin >> name;
+    std::getline(std::cin, name);
 
-    const string my_hello = "Hello World";
-//    const string my_hello("Hello World");
-//    const string my_hello{ "Hello World" };
+    cout << "your age ? : ";
+    string age;
+    //cin >> age;
+    std::getline(std::cin, age);
 
-
-    cout << my_hello << endl;
+    cout << name << " " << age <<endl;
 
     return 0;
 
