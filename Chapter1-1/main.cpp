@@ -6,22 +6,22 @@
 
 using namespace std;
 
+struct Rect
+{
+    int length;
+    int width;
+};
 
 int main()
 {
-    int one_student_score; // 1 variable
-    int student_scores[5]; // 5 int
+    cout << sizeof(Rect) << endl;
 
-    one_student_score = 100;
+    Rect rect_arr[10];
 
-    student_scores[0] = 100; // 1st element
-    student_scores[1] = 80; // 2nd element
-    student_scores[2] = 90; // 3rd element
-    student_scores[3] = 50; // 4th element
-    student_scores[4] = 0; // 5th element
+    cout << sizeof(rect_arr) << endl;
 
-    cout << student_scores[0] << endl;
-    cout << (student_scores[0] + student_scores[1]) / 2.0 << endl;
+    rect_arr[0].length = 2;
+    rect_arr[0].width = 2;
 
     return 0;
 
