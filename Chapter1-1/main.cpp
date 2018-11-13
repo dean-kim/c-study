@@ -13,18 +13,18 @@ using namespace std;
 int main()
 {
 
-    int outer_count = 1;
+    int selection; // must be declared outside do/while loop
 
-    while(outer_count <=5)
+    do
     {
-        int inner_count = 1;
-        while (inner_count <= outer_count)
-        {
-            cout << inner_count++ << " ";
-        }
-        cout << endl;
-        ++outer_count;
-    }
+        cout << "1. add" << endl;
+        cout << "2. sub" << endl;
+        cout << "3. mult" << endl;
+        cout << "4. div" << endl;
+        cin >> selection;
+    } while (selection <= 0 || selection >= 5);
+
+    cout << "You selected " << selection << endl;
 
     return 0;
 
