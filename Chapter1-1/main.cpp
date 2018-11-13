@@ -6,6 +6,12 @@
 
 using namespace std;
 
+enum StuName
+{
+    JACK,
+    TOM,
+    JANE,
+};
 
 int main()
 {
@@ -15,8 +21,8 @@ int main()
     //     int my_array[] = { 1, 2, };
     //     int my_array[]{ 1, 2, };
 
-    cout << my_array[0] <<endl;
-    cout << my_array[1] <<endl;
+    cout << my_array[JACK] <<endl;
+    cout << my_array[TOM] <<endl;
     cout << my_array[2] <<endl;
     cout << my_array[3] <<endl;
     cout << my_array[4] <<endl;
