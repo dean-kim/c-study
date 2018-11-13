@@ -10,11 +10,16 @@ using namespace std;
 int main()
 {
 
-    for (int i = 0; i < 10; ++i)
+    int count(0);
+
+    do
     {
-        if ( i % 2 == 0) continue;
-        cout << i << endl;
-    }
+        if (count == 5)
+            continue;
+
+        cout << count << endl;
+    } while (++ count < 10);
+    // while (count < 10) -> this is infinite case
 
     return 0;
 
