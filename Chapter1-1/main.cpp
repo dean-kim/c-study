@@ -3,69 +3,25 @@
 //
 
 #include <iostream>
-#include <cstdlib> // std::radn(), std::srand()
-#include <ctime> // std::time()
-#include <random>
 
 using namespace std;
 
-int getInt()
-{
-    while (true)
-    {
-        cout << "Enter an integer number : ";
-        int x;
-        cin >> x;
-
-        if (std::cin.fail())
-        {
-            std::cin.clear();
-            std::cin.ignore(32767, '\n');
-            cout << "Invalid number, please try again" << endl;
-        }
-        else
-        {
-            std::cin.ignore(32767, '\n');
-
-            return x;
-        }
-    }
-
-}
-
-char getOperator()
-{
-    while(true)
-    {
-        cout << "Enter an operator (+, -) : "; //TODO: more operators *, / etc.
-        char op;
-        cin >> op;
-        std::cin.ignore(32767, '\n');
-
-        if(op == '+' | op == '-')
-            return op;
-        else
-            cout << "Invalid operator, please try again" << endl;
-    }
-
-}
-
-void printResult(int x, char op, int y)
-{
-    if (op == '+') cout << x + y << endl;
-    else if (op == '-') cout << x - y << endl;
-    else{
-        cout << "Invalid operator" << endl;
-    }
-}
 
 int main()
 {
-    int x = getInt();
-    char op = getOperator();
-    int y = getInt();
+    int one_student_score; // 1 variable
+    int student_scores[5]; // 5 int
 
-    printResult(x, op, y);
+    one_student_score = 100;
+
+    student_scores[0] = 100; // 1st element
+    student_scores[1] = 80; // 2nd element
+    student_scores[2] = 90; // 3rd element
+    student_scores[3] = 50; // 4th element
+    student_scores[4] = 0; // 5th element
+
+    cout << student_scores[0] << endl;
+    cout << (student_scores[0] + student_scores[1]) / 2.0 << endl;
 
     return 0;
 
