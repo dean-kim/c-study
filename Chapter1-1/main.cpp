@@ -6,22 +6,24 @@
 
 using namespace std;
 
+// Pseudo Random Number Generator
+unsigned int PRNG()
+{
+    // seed number
+    static unsigned int seed = 5523;
+
+    seed = 8253729 * seed + 2396403;
+
+    return seed % 32768;
+}
 
 int main()
 {
-
-    int count(0);
-//    bool escape_flag = false;
-
-    while (true)
+    for (int count = 1; count <= 100; ++count)
     {
-        char ch;
-        cin >> ch;
+        cout << PRNG() << "\t";
 
-        cout << ch << " " << count++ << endl;
-
-        if (ch == 'x')
-            break;
+        if (count % 5 == 0) cout << endl;
     }
 
     return 0;
