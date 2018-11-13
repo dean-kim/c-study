@@ -6,27 +6,14 @@
 
 using namespace std;
 
-enum StuName
-{
-    JACK,
-    TOM,
-    JANE,
-    NUM_STU,
-};
+#define NUM_STU 10000000
 
 int main()
 {
-    int stu_scores[NUM_STU];
+    const int num_stu = 5;
+//    cin >> num_stu;
 
-    stu_scores[JACK] = 10;
-    stu_scores[TOM] = 20;
-
-    // same result int my_array[5] = { 1, 2, }
-    //     int my_array[] = { 1, 2, };
-    //     int my_array[]{ 1, 2, };
-
-    cout << stu_scores[JACK] << endl;
-    cout << stu_scores[TOM] << endl;
+    int stu[num_stu];
 
     return 0;
 
