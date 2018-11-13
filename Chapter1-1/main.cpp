@@ -5,21 +5,19 @@
 #include <iostream>
 #include <cstdlib> // std::radn(), std::srand()
 #include <ctime> // std::time()
+#include <random>
 
 using namespace std;
 
 
 int main()
 {
-    //std::srand(5323); // seed
-    std::srand(static_cast<unsigned int>(std::time(0))); // seed
+    std::random_device rd;
+    std::mt19937 mersenne(rd()); // create a mesenne twister,
+    std::uniform_int_distribution<> dice(1, 6);
 
-    for (int count = 1; count <= 100; ++count)
-    {
-        cout << std::rand() << "\t";
-
-        if (count % 5 == 0) cout << endl;
-    }
+    for(int count = 1; count <=20; ++count)
+        cout << dice(mersenne) << endl;
 
     return 0;
 
