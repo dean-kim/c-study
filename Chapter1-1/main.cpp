@@ -10,19 +10,15 @@ using namespace std;
 int main()
 {
 
-    for (int count = 0; count < 10; ++count)
+    for(int i=0, j=0; i < 10; ++i, --j)
     {
-        cout << count << endl;
+        cout << i << " " << j << endl;
     }
 
-    // if want to use variable 'count', 'count' initialize outside of 'for' statement
-    // example - can access 'count' variable
-//    int count = 0;
-//    for (; count < 10; ++count)
-//    {
-//        cout << count << endl;
-//    }
-//    cout << count << endl;
+    for(int i=0, j=0; (i + j) < 10; ++i, j += 2)
+    {
+        cout << i << " " << j << endl;
+    }
 
     return 0;
 
