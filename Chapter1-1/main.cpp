@@ -7,14 +7,25 @@
 using namespace std;
 
 
+void breakOrReturn()
+{
+    while (true)
+    {
+        char ch;
+        cin >> ch;
+
+        if (ch == 'b')
+            break;
+        if (ch == 'r')
+            return;
+    }
+    cout << "Hello" << endl;
+}
+
 int main()
 {
+    breakOrReturn();
 
-    for(int j = 0; j < 9; ++j)
-        for(int i = 0; i < 9; ++i)
-        {
-            cout << i << " " << j << endl;
-        }
 
     return 0;
 
