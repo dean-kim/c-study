@@ -3,9 +3,6 @@
 //
 
 #include <iostream>
-#include <string>
-#include <vector>
-#include <cmath>
 
 using namespace std;
 
@@ -13,18 +10,19 @@ using namespace std;
 int main()
 {
 
-    int selection; // must be declared outside do/while loop
-
-    do
+    for (int count = 0; count < 10; ++count)
     {
-        cout << "1. add" << endl;
-        cout << "2. sub" << endl;
-        cout << "3. mult" << endl;
-        cout << "4. div" << endl;
-        cin >> selection;
-    } while (selection <= 0 || selection >= 5);
+        cout << count << endl;
+    }
 
-    cout << "You selected " << selection << endl;
+    // if want to use variable 'count', 'count' initialize outside of 'for' statement
+    // example - can access 'count' variable
+//    int count = 0;
+//    for (; count < 10; ++count)
+//    {
+//        cout << count << endl;
+//    }
+//    cout << count << endl;
 
     return 0;
 
