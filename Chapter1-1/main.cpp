@@ -11,21 +11,22 @@ enum StuName
     JACK,
     TOM,
     JANE,
+    NUM_STU,
 };
 
 int main()
 {
-    int my_array[5] = { 1, 2, };
+    int stu_scores[NUM_STU];
 
-    // same result
+    stu_scores[JACK] = 10;
+    stu_scores[TOM] = 20;
+
+    // same result int my_array[5] = { 1, 2, }
     //     int my_array[] = { 1, 2, };
     //     int my_array[]{ 1, 2, };
 
-    cout << my_array[JACK] <<endl;
-    cout << my_array[TOM] <<endl;
-    cout << my_array[2] <<endl;
-    cout << my_array[3] <<endl;
-    cout << my_array[4] <<endl;
+    cout << stu_scores[JACK] << endl;
+    cout << stu_scores[TOM] << endl;
 
     return 0;
 
