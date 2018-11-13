@@ -10,15 +10,11 @@ using namespace std;
 int main()
 {
 
-    for(int i=0, j=0; i < 10; ++i, --j)
-    {
-        cout << i << " " << j << endl;
-    }
-
-    for(int i=0, j=0; (i + j) < 10; ++i, j += 2)
-    {
-        cout << i << " " << j << endl;
-    }
+    for(int j = 0; j < 9; ++j)
+        for(int i = 0; i < 9; ++i)
+        {
+            cout << i << " " << j << endl;
+        }
 
     return 0;
 
