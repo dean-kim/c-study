@@ -12,7 +12,7 @@ using namespace std;
 int main()
 {
     //std::srand(5323); // seed
-    std::srand(static_cast<unsigned int>(std::time(0)));
+    std::srand(static_cast<unsigned int>(std::time(0))); // seed
 
     for (int count = 1; count <= 100; ++count)
     {
