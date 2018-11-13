@@ -6,22 +6,20 @@
 
 using namespace std;
 
-struct Rect
-{
-    int length;
-    int width;
-};
 
 int main()
 {
-    cout << sizeof(Rect) << endl;
+    int my_array[5] = { 1, 2, };
 
-    Rect rect_arr[10];
+    // same result
+    //     int my_array[] = { 1, 2, };
+    //     int my_array[]{ 1, 2, };
 
-    cout << sizeof(rect_arr) << endl;
-
-    rect_arr[0].length = 2;
-    rect_arr[0].width = 2;
+    cout << my_array[0] <<endl;
+    cout << my_array[1] <<endl;
+    cout << my_array[2] <<endl;
+    cout << my_array[3] <<endl;
+    cout << my_array[4] <<endl;
 
     return 0;
 
