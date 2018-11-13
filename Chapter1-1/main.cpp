@@ -11,15 +11,18 @@ int main()
 {
 
     int count(0);
+//    bool escape_flag = false;
 
-    do
+    while (true)
     {
-        if (count == 5)
-            continue;
+        char ch;
+        cin >> ch;
 
-        cout << count << endl;
-    } while (++ count < 10);
-    // while (count < 10) -> this is infinite case
+        cout << ch << " " << count++ << endl;
+
+        if (ch == 'x')
+            break;
+    }
 
     return 0;
 
