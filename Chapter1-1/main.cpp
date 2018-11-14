@@ -6,34 +6,43 @@
 
 using namespace std;
 
-#define NUM_STU 100000
-
-void doSomething(int stu[])
-{
-    cout << &stu << endl;
-    cout << stu[0] << endl;
-    cout << stu[1] << endl;
-    cout << stu[2] << endl;
-    cout << stu[3] << endl;
-    cout << sizeof(stu) << endl; // pointer size
-
-}
-
 int main()
 {
-    const int num_stu = 5;
-//    cin >> num_stu;
 
-    int stu[num_stu] = { 1, 2, 3, 4, 5, };
+    //const int num_students = 5;
 
-    cout << &stu << endl;
-    cout << stu[0] << endl;
-    cout << stu[1] << endl;
-    cout << stu[2] << endl;
-    cout << stu[3] << endl;
-    cout << sizeof(stu) << endl;
+    int scores[] = { 84, 92, 76, 81, 56 };
 
-    doSomething(stu);
+    const int num_students = sizeof(scores) / sizeof(int);
+
+    int max_score = 0;
+    int min_score = 100;
+    int total_score = 0;
+
+    for (int i = 0; i < num_students; ++i)
+    {
+        total_score += scores[i];
+        max_score = (max_score < scores[i]) ? scores[i] : max_score;
+        min_score = (min_score > scores[i]) ? scores[i] : min_score;
+
+        // if (max_score < scores[i]) max_score = scores[i];
+    }
+
+    double avg_score = static_cast<double>(total_score) / num_students;
+
+    cout << max_score << endl;
+    cout << min_score << endl;
+
+//    int score0 = 84;
+//    int score1 = 92;
+//    int score2 = 76;
+//    int score3 = 81;
+//    int score4 = 56;
+//
+//    int total_score = score0 + score1 + score2 + score3 + score4;
+//
+//    double avg_score = static_cast<double>(total_score) / num_students;
+    //Note: double(total_score) / num_students != double(total / num_students);
 
     return 0;
 
