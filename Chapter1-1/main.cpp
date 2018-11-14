@@ -19,9 +19,9 @@ int main()
     /*              value   index
      3 5 2 1 4        1       3      change 1,3 position
      1 5 2 3 4        2       2      change 5,2 position
-     1 2 5 3 4        3       3      change 3,5 position
-     1 2 3 5 4        4       4      change 1,3 position
-     1 2 3 4 5                       change 1,3 position
+     1 2 5 3 4        3       3      change 5,3 position
+     1 2 3 5 4        4       4      change 5,4 position
+     1 2 3 4 5                       
      */
 
     const int length = 5;
