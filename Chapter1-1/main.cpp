@@ -6,43 +6,56 @@
 
 using namespace std;
 
+void printArray(const int array[], const int length)
+{
+    for (int index = 0; index < length; ++index)
+        cout << array[index] << " ";
+    cout << endl;
+}
+
 int main()
 {
 
-    //const int num_students = 5;
+    /*              value   index
+     3 5 2 1 4        1       3      change 1,3 position
+     1 5 2 3 4        2       2      change 5,2 position
+     1 2 5 3 4        3       3      change 3,5 position
+     1 2 3 5 4        4       4      change 1,3 position
+     1 2 3 4 5                       change 1,3 position
+     */
 
-    int scores[] = { 84, 92, 76, 81, 56 };
+    const int length = 5;
 
-    const int num_students = sizeof(scores) / sizeof(int);
+    int array[length] = { 3, 5, 2, 1, 4 };
 
-    int max_score = 0;
-    int min_score = 100;
-    int total_score = 0;
+//    // swap
+//    int temp = array[0];
+//    array[0] = array[1];
+//    array[1] = temp;
 
-    for (int i = 0; i < num_students; ++i)
+    printArray(array, length);
+
+    for (int startIdx = 0; startIdx < length-1; ++startIdx)
     {
-        total_score += scores[i];
-        max_score = (max_score < scores[i]) ? scores[i] : max_score;
-        min_score = (min_score > scores[i]) ? scores[i] : min_score;
-
-        // if (max_score < scores[i]) max_score = scores[i];
+        int smallestIdx = startIdx;
+        for (int currIdx = startIdx + 1; currIdx < length; ++currIdx)
+        {
+            if (array[smallestIdx] > array[currIdx])
+            {
+                smallestIdx = currIdx;
+            }
+        }
+        // swap two values in the array
+        // std:: swap(array[smallestIdx], array[startIdx]);
+        {
+            int temp = array[smallestIdx];
+            array[smallestIdx] = array[startIdx];
+            array[startIdx] = temp;
+        }
     }
 
-    double avg_score = static_cast<double>(total_score) / num_students;
+    printArray(array, length);
 
-    cout << max_score << endl;
-    cout << min_score << endl;
-
-//    int score0 = 84;
-//    int score1 = 92;
-//    int score2 = 76;
-//    int score3 = 81;
-//    int score4 = 56;
-//
-//    int total_score = score0 + score1 + score2 + score3 + score4;
-//
-//    double avg_score = static_cast<double>(total_score) / num_students;
-    //Note: double(total_score) / num_students != double(total / num_students);
 
     return 0;
 
