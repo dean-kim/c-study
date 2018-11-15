@@ -12,10 +12,7 @@ int main()
 
     char myString[] = "string";
 
-    for (int i = 0; i < 7; ++i)
-    {
-        cout << (int)myString[i] << endl;
-    }
+    cout << sizeof(myString) / sizeof(myString[0]) << endl;
 
     return 0;
 
