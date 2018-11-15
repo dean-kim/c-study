@@ -11,22 +11,15 @@ using namespace std;
 int main()
 {
 
-    char source[] = "Copy this!";
+    int x = 5;
 
-    char dest[50];
+    cout << x << endl;
+    cout << &x << endl; // & : address-of-operator
 
-    strcpy(dest, source);
+    // de-reference operator (*)
+    // pointer 는 주소를 저장하는 변수라고 여기자
+    cout << *(&x) << endl;
 
-//    strcat();
-
-//    strcat(dest, source);
-
-//    strcmp(); -> compare, if equal return 0, else return -1
-
-    cout << strcmp(source, dest) << endl;
-
-    cout << source << endl;
-    cout << dest << endl;
 
     return 0;
 
