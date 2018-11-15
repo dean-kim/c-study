@@ -10,9 +10,13 @@ using namespace std;
 int main()
 {
 
-    char myString[] = "string";
+    char myString[255];
 
-    cout << sizeof(myString) / sizeof(myString[0]) << endl;
+    cin >> myString;
+
+    myString[4] = '\0';
+
+    cout << myString << endl;
 
     return 0;
 
