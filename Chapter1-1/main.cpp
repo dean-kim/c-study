@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <cstring>
 
 using namespace std;
 
@@ -10,22 +11,14 @@ using namespace std;
 int main()
 {
 
-    char myString[255];
+    char source[] = "Copy this!";
 
-//    cin >> myString;
+    char dest[50];
 
-    cin.getline(myString, 255);
+    strcpy(dest, source);
 
-//    cout << myString << endl;
-
-    int ix = 0;
-    while (true)
-    {
-        if(myString[ix] == '\0') break;
-        cout << myString[ix] << " " << (int)myString[ix] << endl;
-        ++ix;
-    }
-
+    cout << source << endl;
+    cout << dest << endl;
 
     return 0;
 
