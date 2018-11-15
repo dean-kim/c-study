@@ -24,13 +24,14 @@ int main()
     cout << endl;
 
 
+//    int array[num_rows][num_columns] = { 0 };
+//    int array[5][4][3];
     int array[num_rows][num_columns] = // row-major
             {
                     {1, 2, 3, 4, 5}, // row 0
                     {6, 7, 8, 9, 10}, // row 1
                     {11, 12, 13, 14, 15} // row 2
             };
-
 
     for (int row = 0; row < num_rows; ++row)
     {
