@@ -8,6 +8,10 @@
 
 using namespace std;
 
+struct Something
+{
+    int a, b, c, d; // 4 * 4 = 16, but pointer is 8
+};
 
 int main()
 {
@@ -20,6 +24,8 @@ int main()
 
     int *ptr_x = &x, *ptr_y = &x;
     double *ptr_d = &d;
+    Something ss;
+    Something *ptr_s;
 
     // pointer has data type
     // 포인터도 결국 주소를 저장하는 변수에 불과하다.
@@ -40,8 +46,12 @@ int main()
     // size check
     cout << sizeof(x) << endl;
     cout << sizeof(d) << endl;
+    cout << sizeof(ss) << endl;
+
     cout << sizeof(&x) << " " << sizeof(ptr_x) << endl;
     cout << sizeof(&d) << " " << sizeof(ptr_d) << endl;
+    cout << sizeof(&ss) << " " << sizeof(ptr_s) << endl;
+
 
 
 
