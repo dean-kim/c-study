@@ -13,13 +13,24 @@ int main()
 
     int x = 5;
 
-    cout << x << endl;
-    cout << &x << endl; // & : address-of-operator
+//    typedef int* pint;
+//    pint ptr_x = &x, ptr_y = &x;
 
-    // de-reference operator (*)
-    // pointer 는 주소를 저장하는 변수라고 여기자
-    cout << *(&x) << endl;
+    int *ptr_x = &x, *ptr_y = &x;
 
+    // pointer has data type
+    // 포인터도 결국 주소를 저장하는 변수에 불과하다.
+    // 포인터도 데이터 타입은 갖고 있음.
+    // int type 변수에 대한 포인터
+//    int * ptr_x = &x; // '*' is parameter
+
+    // address
+    cout << ptr_x << endl;
+
+    // de-referencing
+    cout << *ptr_x << endl;
+
+    
 
     return 0;
 
