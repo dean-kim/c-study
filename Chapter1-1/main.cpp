@@ -39,7 +39,7 @@ int main()
     // de-referencing
     cout << *array << endl;
     cout << *name << endl;
-    cout << *ptr << endl;
+    cout << *ptr << " " << *(ptr + 1) << endl; // 포인터 연산
 
     printArray(array);
 
