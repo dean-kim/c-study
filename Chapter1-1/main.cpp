@@ -8,6 +8,14 @@
 
 using namespace std;
 
+// void printArray(int *array) -> same result
+void printArray(int array[])
+{
+    cout << sizeof(array) << endl; // 8, because of array recognize as pointer
+    cout << *array << endl;
+
+    *array = 100;
+}
 
 int main()
 {
@@ -32,6 +40,10 @@ int main()
     cout << *array << endl;
     cout << *name << endl;
     cout << *ptr << endl;
+
+    printArray(array);
+
+    cout << array[0] << " " << *array << endl;
 
     return 0;
 
