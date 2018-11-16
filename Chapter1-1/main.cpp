@@ -18,6 +18,10 @@ int main()
 
     int *ptr = array;
 
+    cout << sizeof(array) << endl;
+
+    cout << sizeof(ptr) << endl;
+
     cout << array << endl;
     cout << name << endl;
     cout << ptr << endl;
