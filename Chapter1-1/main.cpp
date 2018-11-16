@@ -16,14 +16,18 @@ int main()
 
     char name[] = "JackJack";
 
+    int *ptr = array;
+
     cout << array << endl;
     cout << name << endl;
+    cout << ptr << endl;
     cout << &array[0] << endl;
     cout << &name[0] << endl;
 
     // de-referencing
     cout << *array << endl;
     cout << *name << endl;
+    cout << *ptr << endl;
 
     return 0;
 
