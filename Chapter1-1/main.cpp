@@ -8,6 +8,16 @@
 
 using namespace std;
 
+struct MyStruct
+{
+    int array[5] = { 9, 7 ,5, 3, 1};
+};
+
+void doSomething(MyStruct *ms)
+{
+    cout << sizeof((*ms).array) << endl;
+}
+
 // void printArray(int *array) -> same result
 void printArray(int array[])
 {
@@ -20,30 +30,20 @@ void printArray(int array[])
 int main()
 {
 
-    int array[5] = { 9, 7 ,5, 3, 1};
+    MyStruct ms;
+
+    cout << ms.array[0] << endl;
+    cout << sizeof(ms.array) << endl;
+
+    doSomething(&ms);
 
     char name[] = "JackJack";
 
-    int *ptr = array;
-
-    cout << sizeof(array) << endl;
-
-    cout << sizeof(ptr) << endl;
-
-    cout << array << endl;
     cout << name << endl;
-    cout << ptr << endl;
-    cout << &array[0] << endl;
     cout << &name[0] << endl;
 
     // de-referencing
-    cout << *array << endl;
     cout << *name << endl;
-    cout << *ptr << " " << *(ptr + 1) << endl; // 포인터 연산
-
-    printArray(array);
-
-    cout << array[0] << " " << *array << endl;
 
     return 0;
 
