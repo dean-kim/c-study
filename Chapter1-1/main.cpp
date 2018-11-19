@@ -8,22 +8,21 @@
 
 using namespace std;
 
-
+const char* getName()
+{
+    return "Jackjack";
+}
 
 int main()
 {
 
-    char name [] = "Jack jack";
+//    char name [] = "Jack jack";
+    const char *name = getName();
+//    const char *name2 = "Jack jack";
+    const char *name2 = getName();
 
-    const int n_name = sizeof(name) / sizeof(name[0]);
-
-    char *ptr = name;
-
-    for(int i = 0; i < n_name; ++i)
-    {
-        cout << *(ptr + i);
-    }
-
+    cout << (uintptr_t)name << endl;
+    cout << (uintptr_t)name2 << endl;
 
     return 0;
 
