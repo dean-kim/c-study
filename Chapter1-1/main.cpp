@@ -27,6 +27,9 @@ int main()
     // 위의 2줄을 한 번에 초기화할 수도 있음.
     int *ptr = new int{ 7 };
 
+    // 만약 메모리를 할당받을 수 없는 경우, 다음과 같이 처리하면 new가 실패할 경우 std::nothrow에 의해 nullptr가 할당된다.
+//    int *ptr = new (std::nothrow) int{ 7 };
+
     cout << ptr << endl;
     cout << *ptr << endl;
 
