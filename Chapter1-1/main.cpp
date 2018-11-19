@@ -25,17 +25,18 @@ int main()
 //    *ptr = 7;
 
     // 위의 2줄을 한 번에 초기화할 수도 있음.
-    int *ptr = new int{ 7 };
+//    int *ptr = new int{ 7 };
 
     // 만약 메모리를 할당받을 수 없는 경우, 다음과 같이 처리하면 new가 실패할 경우 std::nothrow에 의해 nullptr가 할당된다.
-//    int *ptr = new (std::nothrow) int{ 7 };
+    int *ptr = new (std::nothrow) int{ 7 };
+    int *ptr2 = ptr;
 
-    cout << ptr << endl;
-    cout << *ptr << endl;
 
-    // os에 메모리를 돌려줌
     delete ptr;
     ptr = nullptr;
+
+    // 다음을 잊었을 경우 스마트 포인터를 사용하면 해결할 수 있지만 속도의 저하를 가져올 수 있음.
+//    ptr2 = nullptr;
 
     cout << "After delete" << endl;
     cout << ptr << endl;
