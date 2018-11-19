@@ -30,6 +30,14 @@ int main()
     cout << ptr << endl;
     cout << *ptr << endl;
 
-   return 0;
+    // os에 메모리를 돌려줌
+    delete ptr;
+    ptr = nullptr;
+
+    cout << "After delete" << endl;
+    cout << ptr << endl;
+    cout << *ptr << endl;
+
+    return 0;
 
 }
