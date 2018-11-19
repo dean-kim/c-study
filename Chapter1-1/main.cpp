@@ -12,15 +12,23 @@ using namespace std;
 int main()
 {
 
-    // memory leak
-    // new, delete는 os에 다녀오기 때문에 느리다. 프로그래밍을 잘 하려면 new, delete를 적절하게 사용할 수 있는 능력이 필요.
-    while  (true)
-    {
-        int *ptr = new int;
-        cout << ptr << endl;
+    int length;
 
-        delete ptr;
+    cin >> length;
+
+    int *array = new int[length];
+
+    array[0] = 1;
+    array[1] = 2;
+    array[2] = 3;
+
+    for (int i = 0; i < length; ++i)
+    {
+        cout << (uintptr_t)&array[i] << endl;
+        cout << array[i] << endl;
     }
+
+    delete [] array;
 
     return 0;
 
